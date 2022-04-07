@@ -26,7 +26,7 @@ class ProfileHeaderView: UIView {
         return imageView
     }()
 
-    let mainTextView : (UILabel) = {
+    let fullNameLabel : (UILabel) = {
         let text = UILabel()
         text.frame = CGRect(x: 170,
                             y: 27,
@@ -39,7 +39,7 @@ class ProfileHeaderView: UIView {
         return text
     }()
     
-    let subTextView : (UILabel) = {
+    let statusLabel : (UILabel) = {
         let subText = UILabel()
         subText.text = "Waiting for something..."
         subText.font = UIFont.systemFont(ofSize: 14 , weight: .regular) // размер и вес текста
@@ -49,7 +49,7 @@ class ProfileHeaderView: UIView {
     }()
 
     
-    let myButton : (UIButton) = {
+    let setStatusButton : (UIButton) = {
         let button = UIButton()
         button.backgroundColor = .blue
         button.setTitle("Show status", for: .normal)
@@ -75,33 +75,53 @@ class ProfileHeaderView: UIView {
     
     open override func layoutSubviews() {
         super.layoutSubviews()
-        self.addSubview(mainTextView)
         
+        self.addSubview(fullNameLabel)
         self.addSubview(avatarImageView)
-        avatarImageView.frame = CGRect(
-            x: 16,
-            y: 16,
-            width: 130,
-            height: 130)
-       
-        self.addSubview(subTextView)
-        subTextView.frame = CGRect(
-                            x: 170,
-                            y: self.avatarImageView.frame.maxY - 50 , // я сделал 16+ 34 но до конца не понял как , но уверен это правда, если я прав скажите почему, на языке крутится почему , а объяснить не могу, потому что по логике вещей я видел картину так  maxY - 18 ( 18 это разница расстояния до кнопки) но ничего не выходило
-                            width: 200,
-                            height: 50)
+        self.addSubview(statusLabel)
+        self.addSubview(setStatusButton)
         
-        self.addSubview(myButton)
-        myButton.frame = CGRect(
-            x: 16 ,
-            y: self.avatarImageView.frame.maxY + 16, // сначала я сделал эту строчку , после делал фрейм в сабтекст
-            width: self.frame.width - 32,
-            height: 50)
+        // без этого констрейт не запустится
+        
+        self.fullNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.avatarImageView.translatesAutoresizingMaskIntoConstraints = false
+        self.statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.setStatusButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        // массив констрейтов, колхоз но сам
+       [
+        self.fullNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 27),
+        self.fullNameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+        self.fullNameLabel.leadingAnchor.constraint(equalTo: self.avatarImageView.trailingAnchor, constant: 16),
+        
+        self.avatarImageView.heightAnchor.constraint(equalToConstant: 130),
+        self.avatarImageView.widthAnchor.constraint(equalToConstant: 130),
+        self.avatarImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+        self.avatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
+        
+        self.statusLabel.leadingAnchor.constraint(equalTo: self.avatarImageView.trailingAnchor, constant: 16),
+        self.statusLabel.topAnchor.constraint(equalTo: self.fullNameLabel.bottomAnchor, constant: 50),
+        
+        self.setStatusButton.leadingAnchor.constraint(equalTo: leadingAnchor),
+        self.setStatusButton.trailingAnchor.constraint(equalTo: trailingAnchor),
+        self.setStatusButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
        
+        //я не понял задания с кнопкной, тупа сделал новые координаты, но моя была шикарна
+        //        self.setStatusButton.topAnchor.constraint(equalTo: self.avatarImageView.bottomAnchor, constant: 16),
+//        self.setStatusButton.heightAnchor.constraint(equalToConstant: 50),
+//        self.setStatusButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+//        self.setStatusButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
+//
+       ].forEach{$0.isActive = true}
+            
+        
+        
+        
+        
     }
 
     @objc func buttonPressed() {
-        print(subTextView.text ?? "Hello") //если есть текст то пишет из статуса если нету то хеллоу
+        print(statusLabel.text ?? "Hello") //если есть текст то пишет из статуса если нету то хеллоу
         
     }
 
