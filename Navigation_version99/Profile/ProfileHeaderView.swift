@@ -59,7 +59,7 @@ class ProfileHeaderView: UIView {
         button.layer.shadowRadius = 4
         button.layer.shadowColor = UIColor.black.cgColor // тень только так!!!
         button.layer.shadowOpacity = 0.7
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        //button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         
         return button
     }()

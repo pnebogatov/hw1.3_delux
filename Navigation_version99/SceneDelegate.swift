@@ -24,14 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         feedFC.view.backgroundColor = .brown
         feedFC.tabBarItem = UITabBarItem(title: "Feed", image: UIImage(systemName: "bubble.left.circle.fill"), tag: 0)
         
-        let profileFC = ProfileViewController()
-        profileFC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
         
+        let loginVC = LogInViewController()
+        loginVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
         
         let feedNavFC = UINavigationController(rootViewController: feedFC)
         
         
-        tabBarController.viewControllers = [feedNavFC, profileFC,]
+        tabBarController.viewControllers = [feedNavFC, loginVC,]
         
         
         

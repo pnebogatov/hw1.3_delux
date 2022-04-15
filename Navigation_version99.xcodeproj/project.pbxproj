@@ -17,6 +17,7 @@
 		F32B203D27C65B8C00814738 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B203C27C65B8C00814738 /* FeedViewController.swift */; };
 		F32B203F27C934FE00814738 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B203E27C934FC00814738 /* PostViewController.swift */; };
 		F32B204127CB607B00814738 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B204027CB607B00814738 /* InfoViewController.swift */; };
+		F37439152802091200D4381C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37439142802091200D4381C /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F32B203C27C65B8C00814738 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F32B203E27C934FC00814738 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F32B204027CB607B00814738 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		F37439142802091200D4381C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				F32B0F2827D63DC000FAC3E2 /* ProfileHeaderView.swift */,
+				F37439142802091200D4381C /* LogInViewController.swift */,
 				F32B203A27C65B8000814738 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -159,6 +162,7 @@
 			files = (
 				F32B203F27C934FE00814738 /* PostViewController.swift in Sources */,
 				F32B202B27C65AD900814738 /* ViewController.swift in Sources */,
+				F37439152802091200D4381C /* LogInViewController.swift in Sources */,
 				F32B204127CB607B00814738 /* InfoViewController.swift in Sources */,
 				F32B202727C65AD900814738 /* AppDelegate.swift in Sources */,
 				F32B203D27C65B8C00814738 /* FeedViewController.swift in Sources */,
