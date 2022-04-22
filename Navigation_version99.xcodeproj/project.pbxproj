@@ -17,6 +17,8 @@
 		F32B203D27C65B8C00814738 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B203C27C65B8C00814738 /* FeedViewController.swift */; };
 		F32B203F27C934FE00814738 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B203E27C934FC00814738 /* PostViewController.swift */; };
 		F32B204127CB607B00814738 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B204027CB607B00814738 /* InfoViewController.swift */; };
+		F36F6DB62812C6A500832A0A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F6DB52812C6A500832A0A /* Post.swift */; };
+		F36F6DB82812D44300832A0A /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F6DB72812D44300832A0A /* PostTableViewCell.swift */; };
 		F37439152802091200D4381C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37439142802091200D4381C /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		F32B203C27C65B8C00814738 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F32B203E27C934FC00814738 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F32B204027CB607B00814738 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		F36F6DB52812C6A500832A0A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F36F6DB72812D44300832A0A /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F37439142802091200D4381C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +56,9 @@
 			children = (
 				F32B0F2827D63DC000FAC3E2 /* ProfileHeaderView.swift */,
 				F37439142802091200D4381C /* LogInViewController.swift */,
+				F36F6DB52812C6A500832A0A /* Post.swift */,
 				F32B203A27C65B8000814738 /* ProfileViewController.swift */,
+				F36F6DB72812D44300832A0A /* PostTableViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36F6DB82812D44300832A0A /* PostTableViewCell.swift in Sources */,
 				F32B203F27C934FE00814738 /* PostViewController.swift in Sources */,
 				F32B202B27C65AD900814738 /* ViewController.swift in Sources */,
 				F37439152802091200D4381C /* LogInViewController.swift in Sources */,
@@ -169,6 +176,7 @@
 				F32B203B27C65B8000814738 /* ProfileViewController.swift in Sources */,
 				F32B202927C65AD900814738 /* SceneDelegate.swift in Sources */,
 				F32B0F2927D63DC000FAC3E2 /* ProfileHeaderView.swift in Sources */,
+				F36F6DB62812C6A500832A0A /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
